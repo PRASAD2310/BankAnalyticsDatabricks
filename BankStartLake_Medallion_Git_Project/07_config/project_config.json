@@ -1,0 +1,17 @@
+{
+  "project": "BankStartLake",
+  "environment": "demo",
+  "catalog": "workspace",
+  "schemas": {
+    "bronze": "bronze",
+    "silver": "silver",
+    "gold": "gold",
+    "audit": "audit"
+  },
+  "incremental": {
+    "watermark_column": "updated_at",
+    "business_date_column": "transaction_date",
+    "lookback_minutes": 60,
+    "business_key": "transaction_id"
+  }
+}
